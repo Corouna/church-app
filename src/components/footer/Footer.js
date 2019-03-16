@@ -23,19 +23,15 @@ const styles = theme => ({
     },
     footer: {
     	height: 200,
-    	width: 900,
-    	maxWidth: 900,
-    	margin: '20px auto 0',
     	backgroundColor: '#141414',
     	padding: '0 4%'
     },
     links: {
+        marginTop: 140,
     	marginBottom: '1em'
     },
     linkwrapper: {
-    	width: 500,
-    	margin: '0 auto',
-    	textAlign: 'center'
+    	textAlign: 'right'
     },
     anchor: {
     	marginRight: 30,
@@ -51,13 +47,13 @@ const styles = theme => ({
     	cursor: 'none'
     },
     copyright: {
-    	textAlign: 'center',
+    	textAlign: 'left',
     	color: 'grey',
-    	marginTop: 120
+    	marginTop: 150
     },
     brand: {
-    	fontWeight: 700,
-    	color: '#D6CAAB',
+    	fontWeight: 400,
+    	color: 'grey',
     	marginLeft: 10,
     	marginRight: 10
     }
@@ -101,28 +97,30 @@ class Footer extends React.Component {
 
 		return (
 		    <div className={classes.root}>
-		      	<Grid container spacing={24}>
-		        	<div className={classes.footer}>
-		        		<div className={classes.links}>
-		        			<div className={classes.linkwrapper}>
-		        				<a href={links.facebook} target='_blank' onMouseEnter={this.onHovering} onMouseLeave={this.onHovering} className={ `${classes.anchor} ${ this.state.hover ? classes.hover : classes.away }` }>
-			        				<FontAwesomeIcon icon={faFacebook} />
-			        			</a>
-			        			<a href={links.instagram} target='_blank' onMouseEnter={this.onHovering} onMouseLeave={this.onHovering} className={ `${classes.anchor} ${ this.state.hover ? classes.hover : classes.away }` }>
-			        				<FontAwesomeIcon icon={faInstagram} />
-			        			</a>
-			        			<a href={links.twitter} target='_blank' onMouseEnter={this.onHovering} onMouseLeave={this.onHovering} className={ `${classes.anchor} ${ this.state.hover ? classes.hover : classes.away }` }>
-			        				<FontAwesomeIcon icon={faTwitter} />
-			        			</a>
-			        			<a href={links.youtube} target='_blank' onMouseEnter={this.onHovering} onMouseLeave={this.onHovering} className={ `${classes.anchor} ${ this.state.hover ? classes.hover : classes.away }` }>
-			        				<FontAwesomeIcon icon={faYoutube} />
-			        			</a>
-		        			</div>
-		        		</div>
-		        		<div className={classes.copyright}>
-		        			<span>© 2019 <span className={classes.brand}>Kihooii</span> (Powered by KDCA Youth).</span>
-		        		</div>
-		        	</div>
+		      	<Grid container spacing={24} className={classes.footer}>
+	        		<Grid xs={6}>
+                        <div className={classes.copyright}>
+                            <span>© 2019 <span className={classes.brand}>Seventh-Day Adventist Likas Church</span></span>
+                        </div>
+                    </Grid>
+                    <Grid xs={6}>
+                        <div className={classes.links}>
+                            <div className={classes.linkwrapper}>
+                                <a href={links.facebook} target='_blank' onMouseEnter={this.onHovering} onMouseLeave={this.onHovering} className={ `${classes.anchor} ${ this.state.hover ? classes.hover : classes.away }` }>
+                                    <FontAwesomeIcon icon={faFacebook} />
+                                </a>
+                                <a href={links.instagram} target='_blank' onMouseEnter={this.onHovering} onMouseLeave={this.onHovering} className={ `${classes.anchor} ${ this.state.hover ? classes.hover : classes.away }` }>
+                                    <FontAwesomeIcon icon={faInstagram} />
+                                </a>
+                                <a href={links.twitter} target='_blank' onMouseEnter={this.onHovering} onMouseLeave={this.onHovering} className={ `${classes.anchor} ${ this.state.hover ? classes.hover : classes.away }` }>
+                                    <FontAwesomeIcon icon={faTwitter} />
+                                </a>
+                                <a href={links.youtube} target='_blank' onMouseEnter={this.onHovering} onMouseLeave={this.onHovering} className={ `${classes.anchor} ${ this.state.hover ? classes.hover : classes.away }` }>
+                                    <FontAwesomeIcon icon={faYoutube} />
+                                </a>
+                            </div>
+                        </div>
+                    </Grid>
 		      </Grid>
 		    </div>
 		  );
