@@ -27,21 +27,32 @@ const styles = {
     backgroundColor: 'transparent',
     transition: 'background-color 0.7s',
   },
+  logo: {
+    position: 'relative',
+    top: -3,
+    left: 10,
+    marginRight: 25
+  }, 
   title: {
     marginTop: 15,
-    fontWeight: 900
+    fontWeight: 300
+  },
+  titletext: {
+    position:'relative',
+    top: -13
   },
   lighter: {
-    color: '#D6CAAB'
+    color: '#B7D8FE'
   },
   darker: {
-    color: '#BA8D1C'
+    color: '#477FC0'
   },
   group: {
     position: 'absolute',
     right: 10,
     padding: 4,
-    marginTop: 8
+    top: 12,
+    right: 20
   },
   left: {
     backgroundColor: '#fff',
@@ -109,7 +120,7 @@ class HeadNav extends React.Component {
         <AppBar position="static" className={`${classes.bar} ${this.state.show ? classes.show : classes.hide}`} >
           <Toolbar variant="dense">
             <Typography variant="h6" color="inherit" className={`${classes.title} ${this.state.show ? classes.lighter : classes.darker}`}>
-              Kihooii
+              <img src='/images/Adventist_Logo.png' height={40} className={classes.logo} /><span className={classes.titletext} >Seventh-Day Adventist Likas</span>
 						</Typography>
             <ToggleButtonGroup className={classes.group}>
               <ToggleButton
@@ -121,14 +132,8 @@ class HeadNav extends React.Component {
               <ToggleButton
                 onClick={() => setLocale('eng')}
                 value="eng"
-                className={classes.center}>
-                {'English'}
-              </ToggleButton>
-              <ToggleButton
-                onClick={() => setLocale('kdm')}
-                value="kdm"
                 className={classes.right}>
-                {'Dusun'}
+                {'English'}
               </ToggleButton>
             </ToggleButtonGroup>
           </Toolbar>
