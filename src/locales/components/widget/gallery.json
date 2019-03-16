@@ -1,0 +1,37 @@
+{
+  "kdca": {
+    "content": [
+      {
+        "image": "/images/kdca/hallfront.jpg"
+      }
+    ]
+  },
+  "kdm": {
+    "content": [
+      {
+        "image": "/images/kdca/hallfront.jpg"
+      }
+    ]
+  },
+  "kaamatan": {
+    "content": [
+      {
+        "image": "/images/kdca/hallfront.jpg"
+      }
+    ]
+  },
+  "undukngadau": {
+    "content": [
+      {
+        "image": "/images/kdca/hallfront.jpg"
+      }
+    ]
+  },
+  "sugandoi": {
+    "content": [
+      {
+        "image": "/images/kdca/hallfront.jpg"
+      }
+    ]
+  }
+}
