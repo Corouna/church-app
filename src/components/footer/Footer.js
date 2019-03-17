@@ -98,12 +98,12 @@ class Footer extends React.Component {
 		return (
 		    <div className={classes.root}>
 		      	<Grid container spacing={24} className={classes.footer}>
-	        		<Grid xs={6}>
+	        		<Grid item xs={6}>
                         <div className={classes.copyright}>
                             <span>© 2019 <span className={classes.brand}>Seventh-Day Adventist Likas Church</span></span>
                         </div>
                     </Grid>
-                    <Grid xs={6}>
+                    <Grid item xs={6}>
                         <div className={classes.links}>
                             <div className={classes.linkwrapper}>
                                 <a href={links.facebook} target='_blank' onMouseEnter={this.onHovering} onMouseLeave={this.onHovering} className={ `${classes.anchor} ${ this.state.hover ? classes.hover : classes.away }` }>

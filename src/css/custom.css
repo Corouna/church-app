@@ -1,0 +1,5 @@
+/* This is an additional common CSS file */
+
+[class^="church-"] {
+	font-family: 'PT Sans Narrow';
+}

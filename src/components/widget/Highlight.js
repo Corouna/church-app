@@ -17,24 +17,13 @@ const Highlight = (props) => {
   console.log("Let me see what is props and locale :: ", props, locale);
 
   return (
-    <Slider className="slider-wrapper">
+    <Slider className="slider-wrapper" autoplay={5000} >
       {content.map((item, index) => (
         <div
           key={index}
           className="slider-content"
           style={{ background: `url('${item.image}') no-repeat center center` }}
         >
-          <div className="inner">
-            <h1>{item.title}</h1>
-            <p>{item.description}</p>
-            <button>{item.button}</button>
-          </div>
-          <section>
-            <img src={item.userProfile} alt={item.user} />
-            <span>
-              Artikel <strong>{item.user}</strong>
-            </span>
-          </section>
         </div>
       ))}
     </Slider>

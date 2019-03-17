@@ -39,13 +39,16 @@ const styles = {
   },
   titletext: {
     position:'relative',
-    top: -13
+    top: -13,
+    color: 'grey'
   },
-  lighter: {
-    color: '#B7D8FE'
+  visible: {
+    visibility: 'visible',
+    transition: 'opacity 0.7s',
   },
-  darker: {
-    color: '#477FC0'
+  hidden: {
+    visibility: 'hidden',
+    transition: 'opacity 0.7s',
   },
   group: {
     position: 'absolute',
@@ -119,7 +122,7 @@ class HeadNav extends React.Component {
       <div className={classes.root}>
         <AppBar position="static" className={`${classes.bar} ${this.state.show ? classes.show : classes.hide}`} >
           <Toolbar variant="dense">
-            <Typography variant="h6" color="inherit" className={`${classes.title} ${this.state.show ? classes.lighter : classes.darker}`}>
+            <Typography variant="h6" color="inherit" className={`${classes.title} ${this.state.show ? classes.visible : classes.hidden}`}>
               <img src='/images/Adventist_Logo.png' height={40} className={classes.logo} /><span className={classes.titletext} >Seventh-Day Adventist Likas</span>
 						</Typography>
             <ToggleButtonGroup className={classes.group}>

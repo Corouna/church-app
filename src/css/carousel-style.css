@@ -87,12 +87,12 @@ button:hover {
   position: relative;
   top: 0;
   left: 0;
-  height: 70vh;
+  height: 90vh;
   overflow: hidden;
 }
 
 .slide {
-  height: 70vh;
+  height: 90vh;
   background-size: cover !important;
 }
 
@@ -109,8 +109,9 @@ button:hover {
 }
 
 .previousButton, .nextButton {
+    display:none;
 		position: absolute;
-		top: 50%;
+		top: 95%;
 		transform: translateY(-50%);
 		z-index: 10;
 		background: url('http://svgshare.com/i/41_.svg') no-repeat center center / 16px;
@@ -151,8 +152,8 @@ button:hover {
   box-sizing: border-box;
   position: absolute;
   width: 100%;
-  top: 55%;
-  left: 50%;
+  top: 25%;
+  left: 66%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
 }

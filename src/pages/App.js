@@ -5,7 +5,6 @@ import { BrowserRouter } from 'react-router-dom';
 import AppRoutes from '../routes';
 // YouTube component
 import YouTube from 'react-youtube';
-import ModalVideo from 'react-modal-video'
 // Components
 import HeadNav from '../components/header/Nav';
 import Footer from '../components/footer/Footer';
@@ -19,11 +18,9 @@ const App = () => {
   // Defaults to Malay
   const [locale, setLocale] = useState('malay');
   // const [openDialog, setOpenDialog] = useState(true);
-  const [openVideo, setOpenVideo] = useState(true);
 
   return (
     <div>
-      <ModalVideo channel='youtube' videoId='L61p2uyiMSo' isOpen={true} onClose={() => setOpenVideo(false)} />
       <Grid>
         <HeadNav setLocale={setLocale} />
       </Grid>
