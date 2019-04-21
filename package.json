@@ -21,6 +21,7 @@
     "react-content-loader": "^4.0.1",
     "react-dom": "^16.8.3",
     "react-flexbox-grid": "^2.1.2",
+    "react-flipcard": "^0.2.1",
     "react-footer-comp": "^3.0.1",
     "react-items-carousel": "^2.3.0",
     "react-modal-video": "^1.2.1",
