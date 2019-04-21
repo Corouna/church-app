@@ -8,6 +8,7 @@ import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
 import ToggleButton from '@material-ui/lab/ToggleButton';
 import ToggleButtonGroup from '@material-ui/lab/ToggleButtonGroup';
+import '../../css/header.css';
 
 const styles = {
   root: {
@@ -120,22 +121,22 @@ class HeadNav extends React.Component {
 
     return (
       <div className={classes.root}>
-        <AppBar position="static" className={`${classes.bar} ${this.state.show ? classes.show : classes.hide}`} >
+        <AppBar position="static" className={`${'header__base'} ${this.state.show ? classes.show : classes.hide}`} >
           <Toolbar variant="dense">
-            <Typography variant="h6" color="inherit" className={`${classes.title} ${this.state.show ? classes.visible : classes.hidden}`}>
-              <img src='/images/Adventist_Logo.png' height={40} className={classes.logo} /><span className={classes.titletext} >Seventh-Day Adventist Likas</span>
+            <Typography variant="h6" color="inherit" className={`${'header__title'} ${this.state.show ? classes.visible : classes.hidden}`}>
+              <img src='/images/Adventist_Logo.png' height={40} className='header__brand' /><span className='header__title_text' >Seventh-Day Adventist Likas</span>
 						</Typography>
-            <ToggleButtonGroup className={classes.group}>
+            <ToggleButtonGroup className='toggle__group'>
               <ToggleButton
                 onClick={() => setLocale('malay')}
                 value="malay"
-                className={classes.left}>
+                className='toggle__left'>
                 {'Melayu'}
               </ToggleButton>
               <ToggleButton
                 onClick={() => setLocale('eng')}
-                value="eng"
-                className={classes.right}>
+                value="kdm"
+                className='toggle__right'>
                 {'English'}
               </ToggleButton>
             </ToggleButtonGroup>

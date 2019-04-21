@@ -8,6 +8,7 @@ import { faInstagram } from '@fortawesome/free-brands-svg-icons';
 import { faTwitter } from '@fortawesome/free-brands-svg-icons';
 import { faYoutube } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import '../../css/footer.css';
 
 const styles = theme => ({
   	root: {
@@ -96,26 +97,26 @@ class Footer extends React.Component {
 		const anchor = this.state.hover ? 'anchor hover' : 'anchor';
 
 		return (
-		    <div className={classes.root}>
-		      	<Grid container spacing={24} className={classes.footer}>
+		    <div className='footer__root'>
+		      	<Grid container className='footer__foot'>
 	        		<Grid item xs={6}>
-                        <div className={classes.copyright}>
-                            <span>© 2019 <span className={classes.brand}>Seventh-Day Adventist Likas Church</span></span>
+                        <div className='footer__copyright'>
+                            <span>© 2019 <span className='footer__brand'>Seventh-Day Adventist Likas Church</span></span>
                         </div>
                     </Grid>
                     <Grid item xs={6}>
-                        <div className={classes.links}>
+                        <div className='footer__links'>
                             <div className={classes.linkwrapper}>
-                                <a href={links.facebook} target='_blank' onMouseEnter={this.onHovering} onMouseLeave={this.onHovering} className={ `${classes.anchor} ${ this.state.hover ? classes.hover : classes.away }` }>
+                                <a href={links.facebook} target='_blank' onMouseEnter={this.onHovering} onMouseLeave={this.onHovering} className={ `${'footer__anchor'} ${ this.state.hover ? classes.hover : classes.away }` }>
                                     <FontAwesomeIcon icon={faFacebook} />
                                 </a>
-                                <a href={links.instagram} target='_blank' onMouseEnter={this.onHovering} onMouseLeave={this.onHovering} className={ `${classes.anchor} ${ this.state.hover ? classes.hover : classes.away }` }>
+                                <a href={links.instagram} target='_blank' onMouseEnter={this.onHovering} onMouseLeave={this.onHovering} className={ `${'footer__anchor'} ${ this.state.hover ? classes.hover : classes.away }` }>
                                     <FontAwesomeIcon icon={faInstagram} />
                                 </a>
-                                <a href={links.twitter} target='_blank' onMouseEnter={this.onHovering} onMouseLeave={this.onHovering} className={ `${classes.anchor} ${ this.state.hover ? classes.hover : classes.away }` }>
+                                <a href={links.twitter} target='_blank' onMouseEnter={this.onHovering} onMouseLeave={this.onHovering} className={ `${'footer__anchor'} ${ this.state.hover ? classes.hover : classes.away }` }>
                                     <FontAwesomeIcon icon={faTwitter} />
                                 </a>
-                                <a href={links.youtube} target='_blank' onMouseEnter={this.onHovering} onMouseLeave={this.onHovering} className={ `${classes.anchor} ${ this.state.hover ? classes.hover : classes.away }` }>
+                                <a href={links.youtube} target='_blank' onMouseEnter={this.onHovering} onMouseLeave={this.onHovering} className={ `${'footer__anchor'} ${ this.state.hover ? classes.hover : classes.away }` }>
                                     <FontAwesomeIcon icon={faYoutube} />
                                 </a>
                             </div>

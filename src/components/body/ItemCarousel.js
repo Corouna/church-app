@@ -127,6 +127,14 @@ const tileData = [
 	},
 ];
 
+const screenMapper = {
+  isDesktop: {
+    cards: 5
+  },
+  isMobile: {
+    cards: 3
+  }
+};
 
 class CardList extends React.Component {
 
@@ -136,7 +144,9 @@ class CardList extends React.Component {
 		this.state = {
 			children: [],
 			activeItemIndex: 0,
-			show: false
+			show: false,
+			screenSize: window.innerWidth,
+      		cardAmount: 6
 		};
 
 		// For carousel icons
@@ -182,10 +192,12 @@ class CardList extends React.Component {
 		);
 
 		const { classes } = this.props;
-		const { activeItemIndex, children } = this.state;
+		const { activeItemIndex, children, screenSize } = this.state;
+
+		this.cardAmount = screenSize > 750 ? screenMapper['isDesktop'].cards : screenMapper['isMobile'].cards;
  
 		return (
-			<Grid container spacing={16} className={classNames(classes.gridbg, classes.nopadding)}>
+			<Grid container className={classNames(classes.gridbg, classes.nopadding)}>
 				<Grid item xs={12} padding={0}>
 					<div className={ classes.gridtitle }>Title Here</div>
 				</Grid>
@@ -197,12 +209,12 @@ class CardList extends React.Component {
 
 						// Placeholder configurations
 						enablePlaceholder
-						numberOfPlaceholderItems={6}
+						numberOfPlaceholderItems={this.cardAmount}
 						minimumPlaceholderTime={1000}
 						placeholderItem={<Loader />}
 		 
 						// Carousel configurations
-						numberOfCards={6}
+						numberOfCards={this.cardAmount}
 						gutter={12}
 						showSlither={true}
 						firstAndLastGutter={true}

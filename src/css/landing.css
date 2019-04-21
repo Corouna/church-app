@@ -1,0 +1,139 @@
+/* This is the CSS for the landing page only */
+
+.landing__mobile {
+	display:none;
+}
+
+.landing__header {
+	width: 450px;
+	height: 650px;
+	position: absolute;
+	top: 0;
+	left: 50px;
+	background: rgb(16,153,180);
+	background: linear-gradient(to bottom, rgba(16,153,180,1) 0%, rgba(16,153,180,0.9) 25%, rgba(16,153,180,0.9) 55%, rgba(16,153,180,0.9) 65%, rgba(16,153,180,0.7) 75%, rgba(16,153,180,0.3) 85%, rgba(16,153,180,0.2) 90%, rgba(16,153,180,0.1) 95%, rgba(16,153,180,0) 100%);
+	z-index: 1;
+	border-radius: 0 0 20px 20px;
+}
+
+.landing__header_content {
+	width: 400px;
+	height: 450px;
+	position: relative;
+	top: 30px;
+	left: 20px;
+	background-color: transparent;
+	opacity: 1;
+	z-index: 1;
+}
+
+.logo {
+	position:relative;
+	left: 33%;
+}
+
+.landing__header_content_label {
+	margin-top: 20px;
+	font-size: 30px;
+	font-weight: bold;
+	text-align: center;
+	color: #DCDBDB;
+	font-family: 'Roboto Condensed';
+	padding: 30px;
+}
+
+.landing__header_content_activity {
+	margin-top:10px;
+	display:inline-flex;
+	padding-left: 15px;
+}
+
+.activity__day {
+	width: 20%;
+	min-width: 100px;
+	color: #DCDBDB;
+	text-align: left;
+	font-weight: lighter;
+}
+
+.activity__time {
+	width: 30%;
+	min-width: 150px;
+	color: #DCDBDB;
+	text-align: left;
+	font-weight: lighter;
+}
+
+.activity__desc {
+	width: 50%;
+	min-width: 150px;
+	color: #DCDBDB;
+	text-align: left;
+	font-weight: lighter;
+}
+
+.landing__title {
+	background: #141414;
+	height: 10vh;
+	position: relative;
+}
+
+.landing__greet {
+	color: grey;
+	font-size: 3.3em;
+	font-weight: bold;
+	position: absolute;
+	left: 4%;
+	bottom: 50%;
+}
+
+/* MOBILE SUPPORT FOR FOOTER */
+@media screen and (min-width: 330px) and (max-width: 500px) {
+	.landing__mobile {
+		display: block;
+	}
+
+  	.landing__header {
+		display: none;
+	}
+
+	.landing__title {
+		background: #141414;
+		height: 10vh;
+		position:relative;
+	}
+
+	.landing__greet {
+		color: grey;
+		font-size: 2.1em;
+		font-weight: bold;
+		position: absolute;
+		left: 4%;
+		top: -40%;
+	}
+}
+
+@media screen and (max-width: 330px) {
+	.landing__mobile {
+		display: block;
+	}
+
+  	.landing__header {
+		display: none;
+	}
+
+	.landing__title {
+		background: #141414;
+		height: 10vh;
+		position:relative;
+	}
+
+	.landing__greet {
+		color: grey;
+		font-size: 1.5em;
+		font-weight: bold;
+		position: absolute;
+		left: 4%;
+		top: -40%;
+	}
+}

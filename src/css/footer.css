@@ -1,0 +1,116 @@
+/* This is the main CSS for footer component */
+/* Includes the responsive CSS for mobile support too */
+
+.footer__root {
+	flex-grow: 1;
+	background-color: #141414;
+	padding: 70px 15px 20px;
+}
+
+.footer__foot {
+	height: 200px;
+	background-color: #141414;
+	padding: 0 4%;
+}
+
+.footer__copyright {
+	text-align: left;
+	color: grey;
+	margin-top: 150px;
+}
+
+.footer__brand {
+	font-weight: 400;
+	color: grey;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+.footer__links {
+	margin-top: 140px;
+	margin-bottom: 1em;
+}
+
+.footer__anchor {
+	margin-right: 30px;
+	display: inline-block;
+	vertical-align: middle;
+	color: grey;
+	font-size: 30px;
+}
+
+/* MOBILE SUPPORT FOR FOOTER */
+@media screen and (min-width: 330px) and (max-width: 500px) {
+	.footer__root {
+		flex-grow: 1;
+		background-color: #141414;
+		padding: 30px 15px 10px;
+	}
+
+	.footer__foot {
+		height: 100px;
+		background-color: #141414;
+		padding: 0 4%;
+	}
+
+  	.footer__copyright {
+		text-align: left;
+		color: grey;
+		margin-top: 50px;
+	}
+
+	.footer__brand {
+		font-weight: 400;
+		color: grey;
+		margin-left: 10px;
+		margin-right: 10px;
+	}
+
+	.footer__links {
+		margin-top: 50px;
+	}
+
+	.footer__anchor {
+		margin-right: 20px;
+		margin-top: 15px;
+		font-size: 20px;
+	}
+}
+
+@media screen and (max-width: 330px) {
+	.footer__root {
+		flex-grow: 1;
+		background-color: #141414;
+		padding: 20px 15px 10px;
+	}
+
+	.footer__foot {
+		height: 100px;
+		background-color: #141414;
+		padding: 0 4%;
+	}
+
+  	.footer__copyright {
+		text-align: left;
+		color: grey;
+		margin-top: 56px;
+		font-size: 12px;
+	}
+
+	.footer__brand {
+		font-weight: 400;
+		color: grey;
+		margin-left: 10px;
+		margin-right: 10px;
+	}
+
+	.footer__links {
+		margin-top: 50px;
+	}
+
+	.footer__anchor {
+		margin-right: 15px;
+		margin-top: 15px;
+		font-size: 15px;
+	}
+}
