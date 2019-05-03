@@ -1,5 +1,10 @@
 /* This is the CSS for the landing page only */
 
+.landing {
+	background: #141414;
+	height: 10vh;
+}
+
 .landing__mobile {
 	display:none;
 }
@@ -87,6 +92,57 @@
 	bottom: 50%;
 }
 
+.landing__prmsg {
+	background: #141414;
+	height: 40vh;
+	position: relative;
+}
+
+.landing__prmsg_avatar {
+	position: absolute;
+	left: 100px;
+	top: 10px;
+}
+
+.landing__prmsg_msg {
+	width: 65%;
+    position: absolute;
+    left: 340px;
+    background: #141414;
+    color: grey;
+
+}
+
+.landing__prmsg_msg .msg_title {
+	color: #fff;
+    font-size: 1.8em;
+    margin-bottom: 25px;
+}
+
+.landing__prmsg_msg .msg_box {
+    background: #141414;
+    box-shadow:none !important;
+}
+
+.landing__prmsg_msg .msg_sign {
+	color: #fff;
+    font-size: 1.2em;
+    margin-top: 35px;
+    font-style: italic;
+    font-weight: lighter;
+    right: 20px;
+    position: absolute;
+}
+
+.landing__prayreq {
+	height: 8vh;
+}
+
+.prayreq_link {
+	color: gold;
+	margin: 30px auto 30px;
+}
+
 /* MOBILE SUPPORT FOR FOOTER */
 @media screen and (min-width: 330px) and (max-width: 500px) {
 	.landing__mobile {
@@ -110,6 +166,57 @@
 		position: absolute;
 		left: 4%;
 		top: -40%;
+	}
+
+	.landing__prmsg {
+		background: #141414;
+		height: 65vh;
+		position: relative;
+	}
+
+	.landing__prmsg_avatar {
+		position: absolute;
+		left: 100px;
+		top: 10px;
+	}
+
+	.landing__prmsg_msg {
+		width: 100%;
+	    position: absolute;
+	    left:0;
+	    bottom: 57px;
+	    background: #141414;
+	    color: grey;
+	}
+
+	.landing__prmsg_msg .msg_title {
+		color: #fff;
+	    font-size: 1.3em;
+	    margin-bottom: 25px;
+	    padding: 0 15px;
+	}
+
+	.landing__prmsg_msg .msg_box {
+	    padding: 0 15px;
+	}
+
+	.landing__prmsg_msg .msg_sign {
+		color: #fff;
+	    font-size: 1.1em;
+	    margin-top: 35px;
+	    right: 20px;
+	    position: absolute;
+	}
+
+	.landing__prayreq {
+		height: 5vh;
+	}
+
+	.prayreq_link {
+		color: gold;
+		margin: 40px auto 0;
+		padding: 0 140px;
+		text-decoration: underline;
 	}
 }
 

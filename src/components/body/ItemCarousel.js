@@ -25,9 +25,10 @@ const styles = theme => ({
 	},
 	gridtitle: {
 		padding: '20px 0 0 20px',
-		fontSize: 15,
+		fontSize: 20,
 		fontWeight: 600,
-		color: '#D6CAAB'
+		color: '#D6CAAB',
+		marginBottom: 15
 	},
 	gridList: {
 		flexWrap: 'nowrap',
@@ -71,60 +72,7 @@ const tileData = [
 		img: '/images/burgers.jpg',
 		title: 'Tasty burger',
 		author: 'director90',
-	},
-	{
-		img: '/images/camera.jpg',
-		title: 'Camera',
-		author: 'Danson67',
-	},
-	{
-		img: '/images/morning.jpg',
-		title: 'Morning',
-		author: 'fancycrave1',
-		featured: true,
-	},
-	{
-		img: '/images/hats.jpg',
-		title: 'Hats',
-		author: 'Hans',
-	},
-	{
-		img: '/images/honey.jpg',
-		title: 'Honey',
-		author: 'fancycravel',
-	},
-	{
-		img: '/images/vegetables.jpg',
-		title: 'Vegetables',
-		author: 'jill111',
-		cols: 2,
-	},
-	{
-		img: '/images/plant.jpg',
-		title: 'Water plant',
-		author: 'BkrmadtyaKarki',
-	},
-	{
-		img: '/images/mushroom.jpg',
-		title: 'Mushrooms',
-		author: 'PublicDomainPictures',
-	},
-	{
-		img: '/images/olive.jpg',
-		title: 'Olive oil',
-		author: 'congerdesign',
-	},
-	{
-		img: '/images/star.jpg',
-		title: 'Sea star',
-		cols: 2,
-		author: '821292',
-	},
-	{
-		img: '/images/bike.jpg',
-		title: 'Bike',
-		author: 'danfador',
-	},
+	}
 ];
 
 const screenMapper = {
@@ -172,7 +120,7 @@ class CardList extends React.Component {
   	}
 
 	// To create the list of children inside
-	createChildren = n => n.map( (a, i) => <Card key={i} title={a.title} author={a.author} img={a.img} /> );
+	createChildren = n => n.map( (a, i) => <Grid onClick={() => this.props.childAction(i)}><Card key={i} title={a.title} author={a.author} img={a.img} /></Grid> );
 
 	// createChildren = n => range(n).map(i => <div key={i} style={{ height: 200, background: '#333' }}>{i}</div>);
  
@@ -191,7 +139,7 @@ class CardList extends React.Component {
 		  	</ContentLoader>
 		);
 
-		const { classes } = this.props;
+		const { title, classes } = this.props;
 		const { activeItemIndex, children, screenSize } = this.state;
 
 		this.cardAmount = screenSize > 750 ? screenMapper['isDesktop'].cards : screenMapper['isMobile'].cards;
@@ -199,7 +147,7 @@ class CardList extends React.Component {
 		return (
 			<Grid container className={classNames(classes.gridbg, classes.nopadding)}>
 				<Grid item xs={12} padding={0}>
-					<div className={ classes.gridtitle }>Title Here</div>
+					<div className={ classes.gridtitle }>{title}</div>
 				</Grid>
         		<Grid item xs={12} className={classes.nopadding}>
 					<ItemsCarousel

@@ -1,13 +1,17 @@
 // Landing page
-import React from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import MenuIcon from '@material-ui/icons/Menu';
+import Dialog from '@material-ui/core/Dialog';
+import DialogContent from '@material-ui/core/DialogContent';
 // import '.../../index.css';
 import Highlight from '../components/widget/Highlight';
 import Navigation from '../components/body/Navigation';
 import CardList from '../components/body/ItemCarousel.js';
 import Grid from '@material-ui/core/Grid';
+import Paper from '@material-ui/core/Paper';
+import Avatar from 'react-avatar';
 import '../css/fontface.css';
 import '../css/custom.css';
 import '../css/landing.css';
@@ -93,9 +97,11 @@ class Landing extends React.Component {
 
     this.state = {
       show: true,
+      index: -1
     };
 
     this.handleScroll = this.handleScroll.bind(this);
+    this.displayDialog = this.displayDialog.bind(this);
   }
 
   componentDidMount() {
@@ -116,6 +122,14 @@ class Landing extends React.Component {
         show,
       }));
     }
+  }
+
+  displayDialog(index) {
+  	console.log('Can i see what is index :: ', index);
+  	this.setState((prevState, props) => ({
+      ...prevState,
+      index
+    }));
   }
 
   render(){
@@ -171,8 +185,33 @@ class Landing extends React.Component {
 		     	<div className='landing__greet'>Welcome to Kota Kinabalu Seventh-Day Adventist Church</div>
 		    </div>
 	    </Grid>
-	    <CardList />
-	    <CardList />
+	    <Grid className={`${'landing__prmsg'} ${this.state.show ? classes.hidden : classes.visible}`}>
+	    	<div className='landing__prmsg_avatar'>
+	    		<Avatar name="Rison Sodundu" round={true} size="200" src="https://www.adventistsabah.org/wp-content/uploads/2016/02/Rison.jpg" />
+	    	</div>
+	    	<div className='landing__prmsg_msg'>
+	    		<div className="msg_title">Message From The Church Pastor</div>
+	    		<Paper className='msg_box'>
+	    			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+	    		</Paper>
+	    		<div className="msg_sign">Pastor Rison Sodundu</div>
+	    	</div>
+	    </Grid>
+	    <Grid className={`${'landing__prayreq'} ${this.state.show ? classes.hidden : classes.visible}`}>
+	    	<div className="prayreq_link">
+	    		<p className="_link text-center" onClick={() => this.setState({ index: 0})} >Send a prayer request</p>
+	    	</div>
+	    </Grid>
+	    <CardList title='Sabbath School' childAction={this.displayDialog} />
+	    <CardList title='Events' childAction={this.displayDialog} />
+	    <CardList title='Videos' childAction={this.displayDialog} />
+	    <Dialog onClose={() => this.setState({ index: -1 }) } open={ this.state.index > -1 } fullWidth={true} maxWidth={'md'} >
+	        <DialogContent className={classes.ads__modal}>
+	          	<Grid>
+	            	Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+	          	</Grid>
+	        </DialogContent>
+	      </Dialog>
 	  </div>
 	)
   }

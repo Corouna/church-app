@@ -1,5 +1,22 @@
 /* This is an additional common CSS file */
 
+body {
+	background: #141414;
+}
+
 [class^="church-"] {
 	font-family: 'PT Sans Narrow';
+}
+
+._link {
+	color: gold;
+	text-decoration: underline;
+}
+
+._link:hover {
+	cursor: pointer;
+}
+
+.text-center {
+	text-align: center;
 }

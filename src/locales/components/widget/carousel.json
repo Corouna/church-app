@@ -16,30 +16,6 @@
         "image": "/images/SDALikas_2.jpg",
         "user": "KDM",
         "userProfile": "/images/KDM.jpg"
-      },
-      {
-        "title": "Pesta Kaamatan",
-        "description": "Pesta Kaamatan adalah pesta menuai yang disambut oleh kaum Kadazan Dusun dan diadakan secara tahunan di negeri Sabah. ",
-        "button": "Kenali Kaamatan",
-        "image": "/images/Kaamatan.jpg",
-        "user": "Kaamatan",
-        "userProfile": "/images/Kaamatan.jpg"
-      },
-      {
-        "title": "Unduk Ngadau",
-        "description": "Kenali dan dekati acara utama pesta Kaamatan yang disambut diseluruh negeri, dan disertai oleh beratus gadis-gadis KDM",
-        "button": "Kenali Unduk Ngadau",
-        "image": "/images/UN.jpg",
-        "user": "Unduk Ngadau",
-        "userProfile": "/images/UN.jpg"
-      },
-      {
-        "title": "Sugandoi",
-        "description": "Artis Sabah juga berbakat bah! Dengan lunak dan alunan suara memikat hati, kenali acara Sugandoi ataupun pertandingan menyanyi yang juga merupakan acara utama di dalam pesta Kaamatan",
-        "button": "Kenali Sugandoi",
-        "image": "/images/Sugandoi.jpg",
-        "user": "Sugandoi",
-        "userProfile": "/images/Sugandoi.jpg"
       }
     ]
   },
@@ -47,43 +23,19 @@
     "content": [
       {
         "title": "Kadazan Dusun Cultural Association (KDCA)",
-        "description": "Everything you need to know about KDCA, and KDCA's roles in safeguarding and developing more than 40 races in Sabah",
-        "button": "About KDCA",
-        "image": "/images/KDCA.png",
+        "description": "Ketahui segala yang anda perlu ketahui tentang KDCA, mengenai fungsi dan peranan KDCA di dalam menjaga dan membangunkan lebih 40 suku kaum utama di Sabah.",
+        "button": "Kenali KDCA",
+        "image": "/images/SDALikas_1.jpg",
         "user": "KDCA",
         "userProfile": "/images/KDCA.png"
       },
       {
-        "title": "Kadazan Dusun Race",
-        "description": "Kadazandusun is the largest race in Sabah.",
-        "button": "About KDM",
-        "image": "/images/KDM.jpg",
+        "title": "Kaum Kadazan Dusun",
+        "description": "Etnik Kadazandusun adalah suku kaum yang terbesar diantara semua etnik-etnik di negeri Sabah.",
+        "button": "Kenali kaum KDM",
+        "image": "/images/SDALikas_2.jpg",
         "user": "KDM",
         "userProfile": "/images/KDM.jpg"
-      },
-      {
-        "title": "Kaamatan Festival",
-        "description": "Kaamatan Festival is harvest festival celebrated by kaum Kadazan Dusun annually in Sabah.",
-        "button": "About Kaamatan",
-        "image": "/images/Kaamatan.jpg",
-        "user": "Kaamatan",
-        "userProfile": "/images/Kaamatan.jpg"
-      },
-      {
-        "title": "For Ngadau",
-        "description": "Up close and personal on main event happening on Kaamatan festival, participated by hundreds of KDM pageants",
-        "button": "About Ngadau",
-        "image": "/images/UN.jpg",
-        "user": "Unduk Ngadau",
-        "userProfile": "/images/UN.jpg"
-      },
-      {
-        "title": "Sugandoi",
-        "description": "Sabahan Artist are talented too! Learn about Sugandoi or singing competition, also among the main events during Kaamatan",
-        "button": "About Sugandoi",
-        "image": "/images/Sugandoi.jpg",
-        "user": "Sugandoi",
-        "userProfile": "/images/Sugandoi.jpg"
       }
     ]
   },
@@ -91,43 +43,19 @@
     "content": [
       {
         "title": "Kadazan Dusun Cultural Association (KDCA)",
-        "description": "KDM locale placeholder here",
+        "description": "Ketahui segala yang anda perlu ketahui tentang KDCA, mengenai fungsi dan peranan KDCA di dalam menjaga dan membangunkan lebih 40 suku kaum utama di Sabah.",
         "button": "Kenali KDCA",
-        "image": "/images/KDCA.png",
+        "image": "/images/SDALikas_1.jpg",
         "user": "KDCA",
         "userProfile": "/images/KDCA.png"
       },
       {
         "title": "Kaum Kadazan Dusun",
-        "description": "KDM locale placeholder here",
+        "description": "Etnik Kadazandusun adalah suku kaum yang terbesar diantara semua etnik-etnik di negeri Sabah.",
         "button": "Kenali kaum KDM",
-        "image": "/images/KDM.jpg",
+        "image": "/images/SDALikas_2.jpg",
         "user": "KDM",
         "userProfile": "/images/KDM.jpg"
-      },
-      {
-        "title": "Pesta Kaamatan",
-        "description": "KDM locale placeholder here",
-        "button": "Kenali Kaamatan",
-        "image": "/images/Kaamatan.jpg",
-        "user": "Kaamatan",
-        "userProfile": "/images/Kaamatan.jpg"
-      },
-      {
-        "title": "Unduk Ngadau",
-        "description": "KDM locale placeholder here",
-        "button": "Kenali Unduk Ngadau",
-        "image": "/images/UN.jpg",
-        "user": "Unduk Ngadau",
-        "userProfile": "/images/UN.jpg"
-      },
-      {
-        "title": "Sugandoi",
-        "description": "KDM locale placeholder here",
-        "button": "Kenali Sugandoi",
-        "image": "/images/Sugandoi.jpg",
-        "user": "Sugandoi",
-        "userProfile": "/images/Sugandoi.jpg"
       }
     ]
   }
